@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular6-httpclient": {
+    "example-restapi-client": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular6-httpclient",
+            "outputPath": "dist/example-restapi-client",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -54,18 +54,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular6-httpclient:build"
+            "browserTarget": "example-restapi-client:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular6-httpclient:build:production"
+              "browserTarget": "example-restapi-client:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular6-httpclient:build"
+            "browserTarget": "example-restapi-client:build"
           }
         },
         "test": {
@@ -99,7 +99,7 @@
         }
       }
     },
-    "angular6-httpclient-e2e": {
+    "example-restapi-client-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -107,11 +107,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular6-httpclient:serve"
+            "devServerTarget": "example-restapi-client:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular6-httpclient:serve:production"
+              "devServerTarget": "example-restapi-client:serve:production"
             }
           }
         },
@@ -127,5 +127,5 @@
       }
     }
   },
-  "defaultProject": "angular6-httpclient"
+  "defaultProject": "example-restapi-client"
 }
