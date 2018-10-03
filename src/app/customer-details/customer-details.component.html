@@ -1,4 +1,4 @@
-<h5><span class="badge badge-light ">ID: {{customer._id}}</span> -> {{customer.firstname}}</h5>
+<h5><span class="badge badge-light">ID: {{customer._id}}</span> -> {{customer.firstname}}</h5>
 <div [hidden]="submitted">
     <form #detailCustomerForm="ngForm">
       <div class="form-group">
@@ -29,6 +29,24 @@
              class="alert alert-danger">
             Age is required
         </div>
+      </div>
+
+      <!-- Edit Hobbies form -->
+      <form (submit)="formSubmitHobby(hobby.value)">
+        <div class="form-group">
+          <label for="hobby">Hobbies</label>
+          <input type="text" class="form-control" id="hobby"
+          placeholder="Press [Enter] to add Hobby"
+          [(ngModel)]="hobbyInputVal" name="hobby" #hobby="ngModel">
+        </div>
+      </form>
+      <!-- List out items from hobbies -->
+      <div class="form-group">
+        <span class="badge badge-light" *ngFor="let hobby of customer.hobbies" id="hobbyButton">
+          <div id="hobbyName">{{hobby}}</div>
+          <!-- Add a delete button for this item -->
+          <button type="button" class="btn btn-dark" (click)="deleteHobby(hobby)" title="Remove" id="removeHobbyBut">X</button>
+        </span>
       </div>
 
       <div class="btn-group btn-group-sm">

@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+html, container, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: #ff3366;
+    background-image: linear-gradient(20deg, #ff5983 0%, #ff3366 100%);
+    /*background-image: linear-gradient(20deg, rgb(155, 131, 188) 0%, rgb(81, 63, 149) 100%);*/
+}
+#mainContent {
+    margin: auto;
+    width: 100%;
+}
+.alert.alert-danger {color: #ff3265}
+
+@media only screen and (max-width: 760px) {
+    /* Change content width so they take entire width of screen*/
+    #mainContent {
+        max-width: 100%;
+        width: 100%;
+        flex: 0 0 100%;
+    }
+}

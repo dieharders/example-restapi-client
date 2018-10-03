@@ -1,10 +1,11 @@
-<h3>Add Customer</h3>
+<h3>Add Hero</h3>
 <div [hidden]="submitted">
     <form #addCustomerForm="ngForm">
 
       <div class="form-group">
         <label for="firstname">First Name</label>
-        <input type="text" class="form-control" id="firstname" placeholder="Give Customer's FirstName" 
+        <input type="text" class="form-control" id="firstname"
+        placeholder="Enter Hero's FirstName" 
         required
         [(ngModel)]="customer.firstname" name="firstname" #firstname="ngModel">
         <div [hidden]="firstname.valid || firstname.pristine"
@@ -15,7 +16,8 @@
       
       <div class="form-group">
         <label for="lastname">Last Name</label>
-        <input type="text" class="form-control" id="lastname" placeholder="Give Customer's LastName"
+        <input type="text" class="form-control" id="lastname"
+        placeholder="Enter Hero's LastName"
         required
         [(ngModel)]="customer.lastname" name="lastname" #lastname="ngModel">
         <div [hidden]="lastname.valid || lastname.pristine"
@@ -27,7 +29,7 @@
       <div class="form-group">
         <label for="age">Age</label>
         <input type="number" class="form-control" id="age" 
-        placeholder="Give Customer's Age"
+        placeholder="Enter Hero's Age"
         required
         [(ngModel)]="customer.age" name="age" #age="ngModel">
         <div [hidden]="age.valid || age.pristine"
@@ -35,6 +37,24 @@
             Age is required
         </div>
       </div>
+
+      <!-- Edit Hobbies form -->
+      <form (ngSubmit)="formSubmitHobby(hobby.value)">
+          <div class="form-group">
+            <label for="hobby">Hobbies</label>
+            <input type="text" class="form-control" id="hobby"
+            placeholder="Press [Enter] to add Hobby"
+            [(ngModel)]="hobbyInputVal" name="hobby" #hobby="ngModel">
+          </div>
+        </form>
+        <!-- List out items from hobbies -->
+        <div class="form-group">
+          <span class="badge badge-light" *ngFor="let hobby of customer.hobbies" id="hobbyButton">
+            <div id="hobbyName">{{hobby}}</div>
+            <!-- Add a delete button for this item -->
+            <button type="button" class="btn btn-dark" (click)="deleteHobby(hobby)" title="Remove" id="removeHobbyBut">X</button>
+          </span>
+        </div>
       
       <div class="btn-group btn-group-sm">
         <button type="button" class="btn btn-dark" (click)="addCustomer()" [disabled]="!addCustomerForm.form.valid">Add</button>
