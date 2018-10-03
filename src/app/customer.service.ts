@@ -14,9 +14,9 @@ export class CustomerService {
 
   checkUrl () {
     let url = window.location.hostname;
-    console.log('URL: ' + url);
-    if (url.search('localhost')) {
-      return 'https://example-restapi-server.herokuapp.com/'; // For testing locally http://localhost:8080/
+    //console.log('URL: ' + url);
+    if (url.search('localhost') > -1) {
+      return 'http://localhost:8080/'; // For testing locally
     } else {
       return 'https://example-restapi-server.herokuapp.com/'; // Prod server
     }
