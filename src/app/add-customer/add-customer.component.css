@@ -1,0 +1,15 @@
+.form-control, .badge {color: hsl(345, 100%, 60%)}
+.form-control::placeholder  {color: hsl(244, 100%, 60%)}
+h1, h3, h5, label, p {color: #211d57}
+.btn.btn-dark {
+    color: hsl(0, 0%, 100%);
+    background-color: #211d57;
+}
+.btn.btn-dark:hover {
+    color: #ff3265;
+    background-color: #2b2672;
+}
+.btn.btn-dark:disabled {
+    color: rgb(151, 151, 151);
+    background-color: #232050;
+}
