@@ -11,7 +11,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class CustomerService {
-  private rootUrl = 'http://localhost:8080/' || 'https://example-restapi-server.herokuapp.com/';
+  // For testing locally: 'http://localhost:8080/'
+  private rootUrl = 'https://example-restapi-server.herokuapp.com/';
   private customersUrl = this.rootUrl + 'api/customers';  // URL to web api
   constructor(
     private http: HttpClient
