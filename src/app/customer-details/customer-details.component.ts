@@ -24,6 +24,7 @@ export class CustomerDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
+    // Get the customer via id in url from server
     this.customerService.getCustomer(id)
       .subscribe(customer => this.customer = customer);
   }
@@ -36,8 +37,7 @@ export class CustomerDetailsComponent implements OnInit {
 
   delete(): void {
     this.submitted = true;
-    //this.customerService.deleteCustomer(this.customer._id)
-    this.customerService.deleteCustomer('0')
+    this.customerService.deleteCustomer(this.customer._id)
         .subscribe(result => this.message = "Customer Deleted Successfully!");
   }
 

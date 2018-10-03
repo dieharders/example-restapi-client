@@ -37,8 +37,7 @@
       </div>
       
       <div class="btn-group btn-group-sm">
-      	<button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
-      	<button type="button" class="btn btn-dark" (click)="addCustomer()" [disabled]="!addCustomerForm.form.valid">Add</button>
+        <button type="button" class="btn btn-dark" (click)="addCustomer()" [disabled]="!addCustomerForm.form.valid">Add</button>
       </div>
     </form>
 </div>
@@ -46,7 +45,6 @@
 <div [hidden]="!submitted">
   <p>Submitted Successfully! -> <span class="badge badge-light">{{customer.firstname}}  {{customer.lastname}}</span></p>
 	<div class="btn-group btn-group-sm">
-    	<button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
     	<button type="button" class="btn btn-dark" (click)="newCustomer(); addCustomerForm.reset()">Continue</button>
     </div>
 </div>

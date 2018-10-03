@@ -21,11 +21,11 @@ export class CustomerComponent  implements OnInit {
 
   getCustomers() {
     return this.customerService.getCustomers()
-               .subscribe(
-                 customers => {
-                  console.log(customers);
-                  this.customers = customers
-                 }
-                );
+      .subscribe(
+        customers => {
+        console.log(customers);
+        this.customers = customers
+        }
+      );
  }
 }

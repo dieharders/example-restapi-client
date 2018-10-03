@@ -25,10 +25,10 @@ export class AddCustomerComponent{
     this.customer = new Customer();
   }
 
- addCustomer() {
-   this.submitted = true;
-   this.save();
- }
+  addCustomer() {
+    this.submitted = true;
+    this.save();
+  }
 
   goBack(): void {
     this.location.back();
