@@ -13,10 +13,10 @@ const httpOptions = {
 export class CustomerService {
 
   checkUrl () {
-    let url = window.location.origin;
-    //console.log('URL: ' + url);
+    let url = window.location.hostname;
+    console.log('URL: ' + url);
     if (url.search('localhost')) {
-      return 'http://localhost:8080/'; // For testing locally
+      return 'https://example-restapi-server.herokuapp.com/'; // For testing locally http://localhost:8080/
     } else {
       return 'https://example-restapi-server.herokuapp.com/'; // Prod server
     }
