@@ -1,7 +1,16 @@
 h1 {
-    color: #211d57;
-    font-weight: bold;
+    color: #ffffff;
+    font-weight: lighter;
     text-align: center;
 }
-a.btn {color: #ff3265}
-a.btn:hover {color: #211d57}
+a.btn {color: #211d57}
+a.btn:hover {color: #ff3265}
+
+#retrieve {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#create {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

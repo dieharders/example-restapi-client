@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Customer } from '../customer';
 import { CustomerService } from '../customer.service';
+import { animView } from '../animations/transitions.animation'; // Anim file
 
 import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-add-customer',
   templateUrl: './add-customer.component.html',
-  styleUrls: ['./add-customer.component.css']
+  styleUrls: ['./add-customer.component.css'],
+  animations: [animView] // add our animations
 })
 
 export class AddCustomerComponent{

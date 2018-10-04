@@ -1,5 +1,5 @@
 .ng-valid[required], .ng-valid.required  {
-    border-left: 5px solid hsl(0, 0%, 100%); /* valide */
+    border-left: 5px solid hsl(0, 0%, 100%); /* valid */
   }
 
 .ng-invalid:not(form)  {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer } from '../customer';
 import { CustomerService } from '../customer.service';
+import { animView } from '../animations/transitions.animation'; // Anim file
 
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
@@ -9,6 +10,7 @@ import { Location } from '@angular/common';
   selector: 'app-customer-details',
   templateUrl: './customer-details.component.html',
   styleUrls: ['./customer-details.component.css'],
+  animations: [animView] // add our animations
 })
 export class CustomerDetailsComponent implements OnInit {
 

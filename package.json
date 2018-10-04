@@ -12,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^6.0.3",
+    "@angular/animations": "^6.1.9",
     "@angular/cli": "^6.0.8",
     "@angular/common": "^6.0.3",
     "@angular/compiler": "^6.0.3",
@@ -30,8 +30,8 @@
     "jquery": "^3.3.1",
     "path": "^0.12.7",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26",
-    "typescript": "~2.7.2"
+    "typescript": "~2.7.2",
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",

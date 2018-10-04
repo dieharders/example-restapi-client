@@ -1,4 +1,4 @@
-<h5>All Heroes</h5>
-<div *ngFor="let cust of customers; let rowIndex=index">
+<h3>All Heroes</h3>
+<div *ngFor="let cust of customers; let rowIndex=index" [@transitionView]>
   <a [routerLink]="['/customers', cust._id]"><span class="badge badge-dark">{{rowIndex + 1}}</span> -> {{cust.firstname}}</a>
 </div>

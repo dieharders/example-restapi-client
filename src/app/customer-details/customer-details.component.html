@@ -1,5 +1,5 @@
 <h5><span class="badge badge-light">ID: {{customer._id}}</span> -> {{customer.firstname}}</h5>
-<div [hidden]="submitted">
+<div [hidden]="submitted" [@transitionView]>
     <form #detailCustomerForm="ngForm">
       <div class="form-group">
         <label for="firstname">First Name</label>
@@ -57,7 +57,7 @@
     </form>
 </div>
  
-<div [hidden]="!submitted">
+<div [hidden]="!submitted" [@transitionView]>
     <p>{{message}}</p>
     <div class="btn-group btn-group-sm">
       <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>

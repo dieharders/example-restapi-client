@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Needed for animations
 import { FormsModule }   from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
 
@@ -22,7 +23,8 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule // Add for animations
   ],
   providers: [],
   bootstrap: [AppComponent]
