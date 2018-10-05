@@ -1,4 +1,4 @@
-//** For Heroku to serve us our Angular App **//
+//** For Heroku to serve our Angular App **//
 
 // Install express server
 const express = require('express');
@@ -14,6 +14,6 @@ app.get('/*', function(req,res) {
     res.sendFile(path.join(__dirname,'/dist/example-restapi-client/index.html'));
 });
 
-// Start the app by listening on the default Heroku port
+// Start the app by listening on the default or Heroku port
 const port = process.env.PORT || 8080;
 app.listen(port);
