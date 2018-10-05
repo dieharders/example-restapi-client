@@ -1,7 +1,17 @@
-<h3>All Heroes</h3>
-
 <loading-spinner *ngIf="showSpinner"></loading-spinner>
 
-<div class="heroSelect" *ngFor="let cust of customers; let rowIndex=index" [@transitionView]>
-  <a [routerLink]="['/customers', cust._id]"><span class="badge badge-dark">{{rowIndex + 1}}</span> {{cust.firstname}} {{cust.lastname}}</a>
+<h3 *ngIf="!showSpinner">All Heroes</h3>
+<div *ngIf="!showSpinner">
+  <div class="heroSelect" *ngFor="let cust of customers; let rowIndex=index" [@transitionView]>
+    <a [routerLink]="['/customers', cust._id]"><span class="badge badge-dark">{{rowIndex + 1}}</span> {{cust.firstname}} {{cust.lastname}}</a>
+  </div>
+</div>
+
+<div id="logoContainer" [hidden]="showHeroes">
+    <h5 style="margin-top: 10px">REST API Server and Web App</h5>
+    <br>
+    <p>Built by a hero with<br>❤️ Angular6<br>❤️ Express ❤️ Node</p>
+    <button class="btn btn-light" (click)="showHeroList()">
+      Start the journey
+    </button>
 </div>

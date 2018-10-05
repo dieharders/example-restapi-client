@@ -16,8 +16,8 @@ html, container, body {
     position: fixed;
     width: 600%;
     height: 600%;
-    top: -300%;
-    left: -300%;
+    top: -250%;
+    left: -250%;
     margin: auto;
     padding: 0px;
     z-index: -1;
@@ -26,18 +26,22 @@ html, container, body {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #ff3366;
-    background-image: linear-gradient(20deg, #9233ff 15%, #ff3366 105%);
+    background-image: linear-gradient(20deg, #9233ff 25%, #ff3366 95%);
     /*background-image: linear-gradient(20deg, rgb(155, 131, 188) 0%, rgb(81, 63, 149) 100%);*/
     animation:colorRot 6s;
     -moz-animation:colorRot 6s infinite; /* Firefox */
     -webkit-animation:colorRot 6s infinite; /* Safari and Chrome */
+}
+@keyframes colorRot {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
 }
 @-moz-keyframes colorRot /* Firefox */ {
     0% {transform: rotate(0deg);}
     50% {transform: rotate(180deg);}
     100% {transform: rotate(360deg);}
 }
-
 @-webkit-keyframes colorRot /* Safari and Chrome */ {
     0% {transform: rotate(0deg);}
     50% {transform: rotate(180deg);}
@@ -48,6 +52,7 @@ html, container, body {
     margin: auto;
     padding: 1em;
     width: 100%;
+    min-height: 475px;
 }
 
 .alert.alert-danger {color: #ff3265}

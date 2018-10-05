@@ -20,6 +20,8 @@ export class CustomerComponent  implements OnInit {
 
   // Loading spinner stuff
   showSpinner: boolean = true;
+  // Show the main hero list?
+  showHeroes: boolean = false;
 
   ngOnInit(): void {
      this.getCustomers();
@@ -34,5 +36,8 @@ export class CustomerComponent  implements OnInit {
         this.showSpinner = false; // Hide spinner
         }
       );
- }
+  }
+  showHeroList() {
+    this.showHeroes = true;
+  }
 }

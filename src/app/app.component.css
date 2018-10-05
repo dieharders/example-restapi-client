@@ -3,6 +3,7 @@ h1 {
     font-weight: lighter;
     text-align: center;
 }
+
 a.btn {color: #211d57}
 a.btn:hover {color: #ff3265}
 
@@ -13,4 +14,12 @@ a.btn:hover {color: #ff3265}
 #create {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+#logo {
+    display: fixed;
+    width: 64px;
+    height: 64px;
+    background-image: url("./../assets/icons/logo.svg");
+    margin: auto;
 }
