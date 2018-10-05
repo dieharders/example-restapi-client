@@ -1,3 +1,4 @@
+//** This shows list of all 'customers' **//
 import { Component, OnInit } from '@angular/core';
 
 import { Customer } from '../customer';
@@ -17,6 +18,9 @@ export class CustomerComponent  implements OnInit {
 
   constructor(private customerService: CustomerService) {}
 
+  // Loading spinner stuff
+  showSpinner: boolean = true;
+
   ngOnInit(): void {
      this.getCustomers();
   }
@@ -26,7 +30,8 @@ export class CustomerComponent  implements OnInit {
       .subscribe(
         customers => {
         console.log(customers);
-        this.customers = customers
+        this.customers = customers;
+        this.showSpinner = false; // Hide spinner
         }
       );
  }

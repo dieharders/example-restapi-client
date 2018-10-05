@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { LoadingSpinnerComponent } from './animations/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerComponent,
     CustomerDetailsComponent,
-    AddCustomerComponent
+    AddCustomerComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,7 @@ export class CustomerDetailsComponent implements OnInit {
   submitted = false;
   message: string;
   hobbyInputVal: string;
+  showSpinner: boolean = true; // Loading spinner stuff
 
   constructor(
     private customerService: CustomerService,
@@ -28,9 +29,12 @@ export class CustomerDetailsComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.hobbyInputVal = '';
-    // Get the customer via id in url from server
+    // Get the customer details via their id in url from server
     this.customerService.getCustomer(id)
-      .subscribe(customer => this.customer = customer);
+      .subscribe(customer => {
+        this.customer = customer;
+        this.showSpinner = false; // Hide spinner
+      });
   }
 
   deleteHobby(hobby): void {

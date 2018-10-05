@@ -1,4 +1,7 @@
 <h3>All Heroes</h3>
+
+<loading-spinner *ngIf="showSpinner"></loading-spinner>
+
 <div *ngFor="let cust of customers; let rowIndex=index" [@transitionView]>
-  <a [routerLink]="['/customers', cust._id]"><span class="badge badge-dark">{{rowIndex + 1}}</span> -> {{cust.firstname}}</a>
+  <a [routerLink]="['/customers', cust._id]"><span class="badge badge-dark">{{rowIndex + 1}}</span> -> {{cust.firstname}} {{cust.lastname}}</a>
 </div>

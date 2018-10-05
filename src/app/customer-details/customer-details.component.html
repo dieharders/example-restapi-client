@@ -1,4 +1,7 @@
 <h5><span class="badge badge-light">ID: {{customer._id}}</span> -> {{customer.firstname}}</h5>
+
+<loading-spinner *ngIf="showSpinner"></loading-spinner>
+
 <div [hidden]="submitted" [@transitionView]>
     <form #detailCustomerForm="ngForm">
       <div class="form-group">
