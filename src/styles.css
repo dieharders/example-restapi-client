@@ -5,14 +5,45 @@ html, container, body {
     margin: 0px;
     padding: 0px;
 }
-body {
-    background-color: #ff3366;
+
+/* Rotating Background Color */
+#bgRotColor {
+    position: relative;
+    overflow: hidden;
+}
+#bgRotColor:before {
+    content: "";
+    position: fixed;
+    width: 600%;
+    height: 600%;
+    top: -300%;
+    left: -300%;
+    margin: auto;
+    padding: 0px;
+    z-index: -1;
+
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #ff3366;
     background-image: linear-gradient(20deg, #9233ff 15%, #ff3366 105%);
     /*background-image: linear-gradient(20deg, rgb(155, 131, 188) 0%, rgb(81, 63, 149) 100%);*/
+    animation:colorRot 6s;
+    -moz-animation:colorRot 6s infinite; /* Firefox */
+    -webkit-animation:colorRot 6s infinite; /* Safari and Chrome */
 }
+@-moz-keyframes colorRot /* Firefox */ {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes colorRot /* Safari and Chrome */ {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+
 #mainContent {
     margin: auto;
     padding: 1em;
@@ -34,7 +65,7 @@ body {
     color: #211d57;
 }
 .form-control:focus {
-    color: hsl(345, 100%, 60%);
+    color: #211d57;
     background-color: rgba(255, 255, 255, 0.9);
     border-color: rgba(255, 255, 255, 0.9);
 }
@@ -50,6 +81,9 @@ body {
     font-weight: lighter;
     color: rgb(44, 29, 253);
 }
+span.badge.badge-dark {
+    background-color: #211d57c2;
+}
 
 h1, h3, h5, label, p {color: #211d57}
 
@@ -63,7 +97,7 @@ h1, h3, h5, label, p {color: #211d57}
 }
 .btn.btn-dark:disabled {
     color: rgb(151, 151, 151);
-    background-color: #232050;
+    background-color: #23205056;
 }
 
 #removeHobbyBut {

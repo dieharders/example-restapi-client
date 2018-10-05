@@ -15,7 +15,7 @@ import { Location } from '@angular/common';
 export class CustomerDetailsComponent implements OnInit {
 
   customer = new Customer() ;
-  submitted = false;
+  submitted: boolean = false;
   message: string;
   hobbyInputVal: string;
   showSpinner: boolean = true; // Loading spinner stuff
@@ -34,6 +34,7 @@ export class CustomerDetailsComponent implements OnInit {
       .subscribe(customer => {
         this.customer = customer;
         this.showSpinner = false; // Hide spinner
+        this.hobbyInputVal = '';
       });
   }
 
@@ -54,15 +55,17 @@ export class CustomerDetailsComponent implements OnInit {
         this.customer.hobbies = [];
       }
       this.customer.hobbies.unshift(hobby);
-      // Clear hobby input val
-      this.hobbyInputVal = '';
+      this.hobbyInputVal = ''; // Clear hobby input val
     }
   }
 
   update(): void {
     this.submitted = true;
     this.customerService.updateCustomer(this.customer)
-        .subscribe(result => this.message = "Hero Updated Successfully!");
+        .subscribe(result => {
+          this.message = "Hero Updated Successfully!";
+          this.hobbyInputVal = ''; // Clear hobby input val
+        });
   }
 
   delete(): void {

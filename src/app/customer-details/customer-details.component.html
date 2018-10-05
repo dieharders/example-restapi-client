@@ -1,4 +1,4 @@
-<h5><span class="badge badge-light">ID: {{customer._id}}</span> -> {{customer.firstname}}</h5>
+<h5><span class="badge badge-light">ID: {{customer._id}}</span> - {{customer.firstname}}</h5>
 
 <loading-spinner *ngIf="showSpinner"></loading-spinner>
 
@@ -48,7 +48,7 @@
         <span class="badge badge-light" *ngFor="let hobby of customer.hobbies" id="hobbyButton">
           <div id="hobbyName">{{hobby}}</div>
           <!-- Add a delete button for this item -->
-          <button type="button" class="btn btn-dark" (click)="deleteHobby(hobby)" title="Remove" id="removeHobbyBut">X</button>
+          <button type="button" class="btn btn-dark" (click)="deleteHobby(hobby)" title="Remove" id="removeHobbyBut">✖️</button>
         </span>
       </div>
 
@@ -60,7 +60,7 @@
     </form>
 </div>
  
-<div [hidden]="!submitted" [@transitionView]>
+<div [hidden]="!submitted">
     <p>{{message}}</p>
     <div class="btn-group btn-group-sm">
       <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>

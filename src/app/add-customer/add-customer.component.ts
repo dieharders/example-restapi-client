@@ -53,6 +53,7 @@ export class AddCustomerComponent{
 
   addCustomer() {
     this.submitted = true;
+    this.hobbyInputVal = ''; // Clear hobby input val
     this.save();
   }
 
