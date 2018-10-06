@@ -1,6 +1,10 @@
 # Angular6 Web Client
 
+## Live demo: https://example-restapi-client.firebaseapp.com/
 This is an example of a front-end (Angular6) communicating with a back-end API to retrieve data locally stored on the back-end server. This data holds directory information on superheroes that can be edited or added to by the web client. Please treat this information with care! This is confidential information of Superheroes' real names and hobbies.
+
+## 2-Part Project
+This project works with another back-end project [example-restapi-server](https://github.com/dieharders/example-restapi-server)
 
 ## Angular Version
 
