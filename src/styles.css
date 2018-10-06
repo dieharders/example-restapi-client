@@ -55,7 +55,12 @@ html, container, body {
     min-height: 475px;
 }
 
-.alert.alert-danger {color: #ff3265}
+.alert.alert-danger {
+    color: #ff3265;
+    background-color: #ffd2dede;
+    border-color: none;
+    border-style: none;
+}
 
 .form-control  {
     color: hsl(345, 100%, 60%);
