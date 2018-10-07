@@ -56,16 +56,16 @@ html, container, body {
 }
 
 .alert.alert-danger {
-    color: #ff3265;
-    background-color: #ffd2dede;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0);
     border-color: none;
     border-style: none;
 }
 
 .form-control  {
     color: hsl(345, 100%, 60%);
-    background-color: rgba(255, 255, 255, 0.4);
-    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgb(255, 255, 255, 0.75);
+    border-color: rgb(255, 255, 255, 0.75);
 }
 .form-control:invalid {
     border-color: rgba(255, 255, 255, 0.4);
@@ -76,8 +76,8 @@ html, container, body {
 }
 .form-control:focus {
     color: #211d57;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
 }
 .form-control::placeholder  {color: #9233ff}
 
@@ -113,24 +113,34 @@ h1, h3, h5, label, p {color: #211d57}
 #removeHobbyBut {
     font-weight: lighter;
     display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin: 0;
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    min-height: 26px;
+    margin: auto;
     padding: 0;
-    border-radius: 32px;
+    border-radius: 8px;
     border-color: rgba(255, 255, 255, 0);
     line-height: 1px;
 }
 #hobbyButton {
+    display: inline-block;
     font-size: 13pt;
     font-weight: initial;
     margin-right: 0.25em;
     margin-bottom: 0.25em;
+    max-width: 100%;
+    height: 34px;
 }
 #hobbyName {
     color: #211d57;
     display: inline-block;
+    /* Hide text when it gets too long */
+    width: calc(100% - 0.25em - 26px);
+    height: 32px;
     margin-right: 0.25em;
+    margin-bottom: -16px;
+    overflow-x: hidden;
 }
 
 @media only screen and (max-width: 760px) {

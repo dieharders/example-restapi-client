@@ -10,7 +10,7 @@
         [(ngModel)]="customer.firstname" name="firstname" #firstname="ngModel">
         <div [hidden]="firstname.valid || firstname.pristine"
              class="alert alert-danger">
-            First Name is required
+             <span class="icon-block"></span> First Name is required!
         </div>
       </div>
       
@@ -22,7 +22,7 @@
         [(ngModel)]="customer.lastname" name="lastname" #lastname="ngModel">
         <div [hidden]="lastname.valid || lastname.pristine"
              class="alert alert-danger">
-            Last Name is required
+             <span class="icon-block"></span> Last Name is required!
         </div>
       </div>
       
@@ -34,7 +34,7 @@
         [(ngModel)]="customer.age" name="age" #age="ngModel">
         <div [hidden]="age.valid || age.pristine"
              class="alert alert-danger">
-            Age is required
+             <span class="icon-block"></span> Age is required!
         </div>
       </div>
 
@@ -52,12 +52,12 @@
           <span class="badge badge-light" *ngFor="let hobby of customer.hobbies" id="hobbyButton">
             <div id="hobbyName">{{hobby}}</div>
             <!-- Add a delete button for this item -->
-            <button type="button" class="btn btn-dark" (click)="deleteHobby(hobby)" title="Remove" id="removeHobbyBut">✖️</button>
+            <button type="button" class="btn btn-dark" (click)="deleteHobby(hobby)" title="Remove" id="removeHobbyBut"><span class="icon-cross"></span></button>
           </span>
         </div>
       
       <div class="btn-group btn-group-sm">
-        <button type="button" class="btn btn-dark" (click)="addCustomer()" [disabled]="!addCustomerForm.form.valid">Add</button>
+        <button type="button" class="btn btn-dark" (click)="addCustomer()" [disabled]="!addCustomerForm.form.valid">Add <span class="icon-circle-with-plus"></span></button>
       </div>
     </form>
 </div>

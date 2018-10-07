@@ -1,5 +1,11 @@
 /* http://tobiasahlin.com/spinkit/ */
 
+.loading {
+  position: relative;
+  top: 14px;
+  color: #fff;
+  margin: auto;
+}
 .spinner {
     position: absolute;
     left: 50%;

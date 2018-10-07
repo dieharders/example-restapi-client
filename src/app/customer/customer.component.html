@@ -1,9 +1,12 @@
 <loading-spinner *ngIf="showSpinner"></loading-spinner>
 
-<h3 *ngIf="!showSpinner">All Heroes</h3>
-<div *ngIf="!showSpinner">
-  <div class="heroSelect" *ngFor="let cust of customers; let rowIndex=index" [@transitionView]>
-    <a [routerLink]="['/customers', cust._id]"><span class="badge badge-dark">{{rowIndex + 1}}</span> {{cust.firstname}} {{cust.lastname}}</a>
+<h3>All Heroes</h3>
+<div [@transitionView]>
+  <div class="heroSelect" *ngFor="let cust of customers; let rowIndex=index">
+    <!-- Placeholder Hero Data -->
+    <a *ngIf="showSpinner"><span class="badge badge-dark">{{rowIndex + 1}} | {{cust.firstname}} {{cust.lastname}}</span></a>
+    <!-- Hero Data from server -->
+    <a *ngIf="!showSpinner" [routerLink]="['/customers', cust._id]"><span class="badge badge-dark">{{rowIndex + 1}} | {{cust.firstname}} {{cust.lastname}}</span></a>
   </div>
 </div>
 

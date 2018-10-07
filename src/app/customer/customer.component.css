@@ -11,13 +11,16 @@ a {
 .badge {
     color: rgb(255, 255, 255);
     background-color: hsl(244, 50%, 23%);
+    height: 23px;
 }
 
 .heroSelect {
     display: inline-block;
     padding: 4px;
+    padding-top: 0px;
     background-color: none;
     font-size: 14pt;
+    cursor: pointer;
 }
 .heroSelect:hover {
     background-color: #ffffff41;

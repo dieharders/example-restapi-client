@@ -1,6 +1,6 @@
 <loading-spinner *ngIf="showSpinner"></loading-spinner>
 
-<h5><span class="badge badge-light">ID: {{customer._id}}</span> - {{customer.firstname}}</h5>
+<h5><span class="badge badge-light">ID: {{customer._id}}</span></h5>
 
 <div [hidden]="submitted" [@transitionView]>
     <form #detailCustomerForm="ngForm">
@@ -10,7 +10,7 @@
         [(ngModel)]="customer.firstname" name="firstname" #firstname="ngModel">
         <div [hidden]="firstname.valid || firstname.pristine"
              class="alert alert-danger">
-            First Name is required
+            First Name is required!
         </div>
       </div>
       
@@ -20,7 +20,7 @@
         [(ngModel)]="customer.lastname" name="lastname" #lastname="ngModel">
         <div [hidden]="lastname.valid || lastname.pristine"
              class="alert alert-danger">
-            Last Name is required
+            Last Name is required!
         </div>
       </div>
       
@@ -30,7 +30,7 @@
         [(ngModel)]="customer.age" name="age" #age="ngModel">
         <div [hidden]="age.valid || age.pristine"
              class="alert alert-danger">
-            Age is required
+            Age is required!
         </div>
       </div>
 
@@ -48,14 +48,14 @@
         <span class="badge badge-light" *ngFor="let hobby of customer.hobbies" id="hobbyButton">
           <div id="hobbyName">{{hobby}}</div>
           <!-- Add a delete button for this item -->
-          <button type="button" class="btn btn-dark" (click)="deleteHobby(hobby)" title="Remove" id="removeHobbyBut">✖️</button>
+          <button type="button" class="btn btn-dark" (click)="deleteHobby(hobby)" title="Remove" id="removeHobbyBut"><span class="icon-cross"></span></button>
         </span>
       </div>
 
       <div class="btn-group btn-group-sm">
-        <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
-        <button type="button" class="btn btn-dark" (click)="update()" [disabled]="!detailCustomerForm.form.valid">Update</button>
-        <button type="button" class="btn btn-dark" (click)="delete()">Delete</button>
+        <button type="button" class="btn btn-dark" (click)="goBack()">Back <span class="icon-chevron-thin-left"></span></button>
+        <button type="button" class="btn btn-dark" (click)="update()" [disabled]="!detailCustomerForm.form.valid">Update <span class="icon-check"></span></button>
+        <button type="button" class="btn btn-dark" (click)="delete()">Delete <span class="icon-trash"></span></button>
 	    </div>
     </form>
 </div>

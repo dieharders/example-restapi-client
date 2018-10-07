@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Customer } from '../customer';
 import { CustomerService } from '../customer.service';
 import { animView } from '../animations/transitions.animation'; // Anim file
+import { stringify } from '@angular/core/src/util';
 
 @Component({
   selector: 'app-customer',
@@ -22,9 +23,18 @@ export class CustomerComponent  implements OnInit {
   showSpinner: boolean = true;
   // Show the main hero list?
   showHeroes: boolean = false;
+  // Placeholder customer data
+  person = [
+    {"_id":"1","firstname":"???","lastname":"????","age":26,"hobbies":["Playing 🏆sports","Dating 😎girls","Catching 🔥fire"]},
+    {"_id":"2","firstname":"???","lastname":"????","age":26,"hobbies":["Playing 🏆sports","Dating 😎girls","Catching 🔥fire"]},
+    {"_id":"3","firstname":"???","lastname":"????","age":26,"hobbies":["Playing 🏆sports","Dating 😎girls","Catching 🔥fire"]},
+    {"_id":"4","firstname":"???","lastname":"????","age":26,"hobbies":["Playing 🏆sports","Dating 😎girls","Catching 🔥fire"]}
+  ];
 
   ngOnInit(): void {
-     this.getCustomers();
+    // Set placeholder customers
+    this.customers = this.person;
+    this.getCustomers();
   }
 
   getCustomers() {
