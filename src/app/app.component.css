@@ -7,6 +7,11 @@ h1 {
 a.btn {color: #211d57}
 a.btn:hover {color: #ff3265}
 
+a.badge.badge-dark {
+    font-size: 10pt;
+    text-transform: uppercase;
+}
+
 #retrieve {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -22,4 +27,31 @@ a.btn:hover {color: #ff3265}
     height: 64px;
     background-image: url("./../assets/icons/logo.svg");
     margin: auto;
+}
+
+#parentContent{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+#childContent{
+    width: 100%;
+    min-height: 240px;
+    height: calc(100vh - 320px);
+    font-size: 18pt;
+    overflow-y: scroll;
+    padding: auto;
+    padding-left: 8px;
+    /* Remove scroolbar */
+    padding-right: 50px; /* Increase/decrease this value for cross-browser compatibility */
+    box-sizing: content-box; /* So the width will be 100% + 50px */
+}
+
+#footerInfo {
+    display: block;
+    padding: 8px;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    text-align: center;
 }

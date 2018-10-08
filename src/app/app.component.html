@@ -16,7 +16,15 @@
             </li>
         </ul>
         <hr>
-        <router-outlet></router-outlet>
+        <div id="parentContent">
+          <div id="childContent">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+        <div id="footerInfo">
+            REST API example by <a class="badge badge-dark" href="https://sorob.net">sorob.net</a>
+            <br> Built by a hero with ❤️ Angular6 ❤️ Express ❤️ Node.js
+        </div>
       </div>
     </div>
   </div>

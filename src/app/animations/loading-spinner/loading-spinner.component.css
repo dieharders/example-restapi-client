@@ -2,9 +2,13 @@
 
 .loading {
   position: relative;
-  top: 14px;
-  color: #fff;
+  top: 18px;
+  left: 0px;
+  color: rgb(22, 22, 22);
   margin: auto;
+  font-size: 10pt;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .spinner {
     position: absolute;

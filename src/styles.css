@@ -9,7 +9,7 @@ html, container, body {
 /* Rotating Background Color */
 #bgRotColor {
     position: relative;
-    overflow: hidden;
+    height: 100%;
 }
 #bgRotColor:before {
     content: "";
@@ -21,7 +21,6 @@ html, container, body {
     margin: auto;
     padding: 0px;
     z-index: -1;
-
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,7 +51,8 @@ html, container, body {
     margin: auto;
     padding: 1em;
     width: 100%;
-    min-height: 475px;
+    height: 100%;
+    min-height: 100%;
 }
 
 .alert.alert-danger {
