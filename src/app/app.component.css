@@ -36,8 +36,8 @@ a.badge.badge-dark {
 }
 #childContent{
     width: 100%;
-    min-height: 240px;
-    height: calc(100vh - 320px);
+    min-height: 200px;
+    height: calc(100vh - 330px);
     font-size: 18pt;
     overflow-y: scroll;
     padding: auto;
