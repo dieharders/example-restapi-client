@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-html, container, body {
+html, body {
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -38,6 +38,7 @@ html, container, body {
     /*-moz-animation:colorRot 6s infinite;*/ /* Firefox */
     /*-webkit-animation:colorRot 6s infinite;*/ /* Safari and Chrome */
 }
+
 @-webkit-keyframes colorRot {
     0%{background-position:100% 0%}
     50%{background-position:0% 100%}
@@ -86,6 +87,7 @@ html, container, body {
     margin: auto;
     padding: 1em;
     width: 100%;
+    max-width: 640px;
     height: 100%;
     min-height: 100%;
 }
@@ -183,6 +185,5 @@ h1, h3, h5, label, p {color: #211d57}
     #mainContent {
         max-width: 100%;
         width: 100%;
-        flex: 0 0 100%;
     }
 }

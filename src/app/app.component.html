@@ -1,32 +1,24 @@
 <div id="bgRotColor">
-  <div class="container">
-    <div class="row">
-      <div class="col-6" id="mainContent">
-        <div id="logo"></div>
-        <h1 class="nav justify-content-center">
-          Hero Viewer
-        </h1>
-        <br>
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a routerLink="customers" id="retrieve" class="btn btn-light btn-sm" role="button" routerLinkActive="active"><span class="icon-open-book"></span> Heroes</a> 
-            </li>
-            <li class="nav-item">
-                <a routerLink="customer/add" id="create" class="btn btn-light btn-sm" role="button" routerLinkActive="active">Create <span class="icon-add-user"></span></a>
-            </li>
-        </ul>
-        <hr>
-        <div id="parentContent">
-          <div id="childContent">
-            <router-outlet></router-outlet>
-          </div>
-        </div>
-        <hr>
-        <div id="footerInfo">
-            REST-API Server example by <a class="badge badge-dark" href="https://sorob.net">sorob.net</a>
-            <br> Built by a hero with ❤️ Angular6 ❤️ Express ❤️ Node.js
-        </div>
-      </div>
+  <div id="mainContent">
+    <div id="logo"></div>
+    <h1 class="nav justify-content-center">
+      Hero Viewer
+    </h1>
+    <br>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a routerLink="customers" id="retrieve" class="btn btn-light btn-sm" role="button" routerLinkActive="active"><span class="icon-open-book"></span> Heroes</a> 
+        </li>
+        <li class="nav-item">
+            <a routerLink="customer/add" id="create" class="btn btn-light btn-sm" role="button" routerLinkActive="active">Create <span class="icon-add-user"></span></a>
+        </li>
+    </ul>
+    <hr>
+    <router-outlet></router-outlet>
+    <hr>
+    <div id="footerInfo">
+        REST-API Server example by <a class="badge badge-dark" href="https://sorob.net">sorob.net</a>
+        <br> Built by a hero with ❤️ Angular6 ❤️ Express ❤️ Node.js
     </div>
   </div>
 </div>
