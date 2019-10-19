@@ -14,20 +14,20 @@ html, body {
 #bgRotColor:before {
     content: "";
     position: fixed;
-    width: 600%;
-    height: 600%;
-    top: -250%;
-    left: -250%;
+    width: 200vw;
+    height: 200vw;
+    top: -100vw;
+    left: -100vw;
     margin: auto;
     padding: 0px;
     z-index: -1;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #ff3366;
-    background-image: linear-gradient(20deg, #9233ff 25%, #ff3366 95%);
+    background-color: #9233ff;
+    background-image: linear-gradient(20deg, #9233ff 25%, #d633ff 95%);
     /*background-image: linear-gradient(20deg, rgb(155, 131, 188) 0%, rgb(81, 63, 149) 100%);*/
-    
+
     /* https://www.gradient-animator.com/ */
     background-size: 200% 200%;
     -webkit-animation: colorRot 13s ease infinite;
@@ -185,5 +185,24 @@ h1, h3, h5, label, p {color: #211d57}
     #mainContent {
         max-width: 100%;
         width: 100%;
+    }
+}
+
+@media all and (orientation:portrait) {
+    #bgRotColor:before {
+        /* whatever is longest */
+        width: 200vh;
+        height: 200vh;
+        top: -50vh;
+        left: -50vh;
+    }
+}
+@media all and (orientation:landscape) {
+    #bgRotColor:before {
+        /* whatever is longest */
+        width: 200vw;
+        height: 200vw;
+        top: -50vw;
+        left: -50vw;
     }
 }
