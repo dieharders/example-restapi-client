@@ -14,31 +14,20 @@ html, body {
 #bgRotColor:before {
     content: "";
     position: fixed;
-    width: 200vw;
-    height: 200vw;
-    top: -100vw;
-    left: -100vw;
     margin: auto;
     padding: 0px;
     z-index: -1;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
     background-color: #9233ff;
-    background-image: linear-gradient(20deg, #9233ff 25%, #d633ff 95%);
-    /*background-image: linear-gradient(20deg, rgb(155, 131, 188) 0%, rgb(81, 63, 149) 100%);*/
-
-    /* https://www.gradient-animator.com/ */
+    background-image: linear-gradient(20deg, #9233ff 25%, #2aaad1 95%);
     background-size: 200% 200%;
     -webkit-animation: colorRot 13s ease infinite;
     -moz-animation: colorRot 13s ease infinite;
     -o-animation: colorRot 13s ease infinite;
     animation: colorRot 13s ease infinite;
-    /*animation:colorRot 6s;*/
-    /*-moz-animation:colorRot 6s infinite;*/ /* Firefox */
-    /*-webkit-animation:colorRot 6s infinite;*/ /* Safari and Chrome */
 }
-
+/* https://www.gradient-animator.com/ */
 @-webkit-keyframes colorRot {
     0%{background-position:100% 0%}
     50%{background-position:0% 100%}
